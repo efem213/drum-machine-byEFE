@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Drum Machine by EFE</title>
+    <script>
+      function play(str) {
+        if (str === "q" || str === "Q") {
+          document.getElementById("display").innerText = "You pressed Q";
+        } else if (str === "w" || str === "W") {
+          document.getElementById("display").innerText = "You pressed W";
+        } else if (str === "e" || str === "E") {
+          document.getElementById("display").innerText = "You pressed E";
+        } else if (str === "a" || str === "A") {
+          document.getElementById("display").innerText = "You pressed A";
+        } else if (str === "s" || str === "S") {
+          document.getElementById("display").innerText = "You pressed S";
+        } else if (str === "d" || str === "D") {
+          document.getElementById("display").innerText = "You pressed D";
+        } else if (str === "z" || str === "Z") {
+          document.getElementById("display").innerText = "You pressed Z";
+        } else if (str === "x" || str === "X") {
+          document.getElementById("display").innerText = "You pressed X";
+        } else if (str === "x" || str === "X") {
+          document.getElementById("display").innerText = "You pressed C";
+        } else if (str === "c" || str === "C") {
+          document.getElementById("display").innerText = "You pressed C";
+        }
+
+
+
+
+        var audio = document.getElementById(str);
+        audio.play();
+      }
+      window.document.onkeyup = function (event) {
+        let keystroke = event.key;
+        if (keystroke === "q" || keystroke === "Q") {
+          play("Q");
+        } else if (keystroke === "w" || keystroke === "W") {
+          play("W");
+        } else if (keystroke === "e" || keystroke === "E") {
+          play("E");
+        } else if (keystroke === "a" || keystroke === "A") {
+          play("A");
+        } else if (keystroke === "s" || keystroke === "S") {
+          play("S");
+        } else if (keystroke === "d" || keystroke === "D") {
+          play("D");
+        } else if (keystroke === "z" || keystroke === "Z") {
+          play("Z");
+        } else if (keystroke === "x" || keystroke === "X") {
+          play("X");
+        } else if (keystroke === "x" || keystroke === "X") {
+          play("X");
+        } else if (keystroke === "c" || keystroke === "C") {
+          play("C");
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+<div class="container" id="drum-machine">
+
+    <h1 class="text-center">Drum Machine! by EFE</h1>
+    <div class="card" style="width: 32rem">
+      <img class="card-img-top" src="https://i.ibb.co/hDWhXKJ/Whiplash.jpg" alt="Drum Machine Display">
+        <div class="card-body">
+          <div id="display" class="card-title text-center">Display is currently Empty</div>
+
+    <button class="drum-pad btn btn-warning btn-lg" id="drum-0" onclick="play('Q')">Q
+      <audio src="./clip/sound-0.mp3" class="clip" id="Q"></audio>
+    </button>
+    <button class="drum-pad btn btn-danger btn-lg" id="drum-1" onclick="play('W')">W
+        <audio src="./clip/sound-1.mp3" class="clip" id="W"></audio>
+    </button>
+    <button class="drum-pad btn btn-success btn-lg" id="drum-2" onclick="play('E')">E
+      <audio src="./clip/sound-2.mp3" class="clip" id="E"></audio>
+    </button>
+    <button  class="drum-pad btn btn-warning btn-lg" id="drum-3" onclick="play('A')">A
+      <audio src="./clip/sound-3.mp3" class="clip" id="A"></audio>
+    </button>
+    <button class="drum-pad btn btn-danger btn-lg" id="drum-4" onclick="play('S')">S
+      <audio src="./clip/sound-4.mp3" class="clip" id="S"></audio>
+    </button>
+    <button class="drum-pad btn btn-success btn-lg" id="drum-5" onclick="play('D')">D
+      <audio src="./clip/sound-5.mp3" class="clip" id="D"></audio>
+    </button>
+    <button class="drum-pad btn btn-warning btn-lg" id="drum-6" onclick="play('Z')">Z
+      <audio src="./clip/sound-6.mp3" class="clip" id="Z"></audio>
+    </button>
+    <button class="drum-pad btn btn-danger btn-lg" id="drum-7" onclick="play('X')">X
+      <audio src="./clip/sound-7.mp3" class="clip" id="X"></audio>
+    </button>
+    <button class="drum-pad btn btn-success btn-lg" id="drum-8" onclick="play('C')">C
+      <audio src="./clip/sound-8.mp3" class="clip" id="C"></audio>
+    </button>
+
+  </div>
+</div>
+  </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
+  </body>
+</html>
